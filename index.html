@@ -7,31 +7,41 @@
 <style>
 
 body{
+margin:0;
+font-family:Arial;
 background:#0f172a;
 color:white;
 text-align:center;
-font-family:Arial;
-padding:40px;
-margin:0;
+}
+
+/* navbar */
+
+.navbar{
+background:#020617;
+padding:15px;
+font-size:18px;
+font-weight:bold;
 }
 
 .logo{
-width:120px;
-height:120px;
-object-fit:cover;
-border-radius:25px;
+width:110px;
 margin-top:40px;
+border-radius:20px;
 }
 
+/* title */
+
 h1{
-font-size:42px;
-margin-top:20px;
+font-size:40px;
+margin-top:10px;
 }
 
 p{
 color:#cbd5e1;
 font-size:18px;
 }
+
+/* button */
 
 button{
 padding:15px 30px;
@@ -43,16 +53,48 @@ margin-top:20px;
 cursor:pointer;
 }
 
-.links{
-margin-top:25px;
+/* section */
+
+.section{
+margin-top:60px;
 }
+
+/* box */
+
+.box{
+background:#020617;
+margin:20px auto;
+padding:20px;
+width:80%;
+max-width:600px;
+border-radius:15px;
+}
+
+/* links */
 
 .links a{
 display:block;
 color:#38bdf8;
 margin:6px;
 text-decoration:none;
-font-size:16px;
+}
+
+/* note */
+
+.note{
+color:yellow;
+font-weight:bold;
+margin-top:15px;
+}
+
+/* footer */
+
+.footer{
+margin-top:60px;
+padding:20px;
+background:#020617;
+font-size:14px;
+color:#94a3b8;
 }
 
 </style>
@@ -61,15 +103,75 @@ font-size:16px;
 
 <body>
 
+<div class="navbar">
+NestBook — by SOTA-eApps
+</div>
+
+
 <img src="icon.png" class="logo">
 
 <h1>NestBook</h1>
 
 <p>
-Smart platform for renting rooms and apartments
+Smart platform for buying, selling, and renting apartments and rooms easily and securely.
 </p>
 
 <button>Download Soon</button>
+
+
+<div class="section">
+
+<h2>Services</h2>
+
+<div class="box">
+
+<p>• Apartments for sale</p>
+<p>• Apartments for rent</p>
+<p>• Rooms for rent</p>
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Publishing Prices</h2>
+
+<div class="box">
+
+<p>Post ad = 20 EGP</p>
+
+</div>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Service Fees (Paid by buyer / renter)</h2>
+
+<div class="box">
+
+<p>Apartment for sale = 350 EGP</p>
+<p>Apartment for rent = 250 EGP</p>
+<p>Single room = 150 EGP</p>
+<p>Bed in shared room = 100 EGP</p>
+<p>Full double room = 150 EGP</p>
+
+<div class="note">
+All services are FREE during the trial period
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="section">
 
 <div class="links">
 
@@ -78,6 +180,18 @@ Smart platform for renting rooms and apartments
 <a href="terms.html">Terms & Conditions</a>
 
 </div>
+
+</div>
+
+
+
+<div class="footer">
+
+© 2026 SOTA-eApps  
+Support: nestbooksupport@gmail.com
+
+</div>
+
 
 </body>
 </html>
