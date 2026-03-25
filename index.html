@@ -14,12 +14,11 @@
             --primary: #0ea5e9;
             --secondary: #6366f1;
             --bg-color: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.65); /* تم التعديل لتأثير الزجاج */
+            --card-bg: rgba(30, 41, 59, 0.65);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: rgba(255, 255, 255, 0.1);
             --nav-bg: rgba(15, 23, 42, 0.85);
-            /* إضافة دوائر مضيئة في الخلفية لتبرز تأثير الزجاج */
             --hero-bg: radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 40%),
                        radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
                        #0f172a;
@@ -39,7 +38,7 @@
                 --primary: #0284c7; 
                 --secondary: #4f46e5;
                 --bg-color: #f8fafc;
-                --card-bg: rgba(255, 255, 255, 0.7); /* تم التعديل لتأثير الزجاج */
+                --card-bg: rgba(255, 255, 255, 0.7);
                 --text-main: #0f172a;
                 --text-muted: #475569;
                 --border-color: rgba(0, 0, 0, 0.05);
@@ -66,7 +65,7 @@
 
         body {
             background-color: var(--bg-color);
-            background-image: var(--hero-bg); /* تطبيق الخلفية المضيئة على كامل الموقع */
+            background-image: var(--hero-bg);
             background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.6;
@@ -79,7 +78,7 @@
             font-family: var(--font-ar);
         }
 
-        /* 1. Preloader (شاشة التحميل) */
+        /* Preloader */
         #preloader {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -90,45 +89,21 @@
             z-index: 99999;
             transition: opacity 0.6s ease, visibility 0.6s ease;
         }
-        #preloader.fade-out {
-            opacity: 0;
-            visibility: hidden;
-        }
-        .loader-logo {
-            width: 120px;
-            border-radius: 25px;
-            animation: pulse-glow 1.5s infinite alternate;
-        }
+        #preloader.fade-out { opacity: 0; visibility: hidden; }
+        .loader-logo { width: 120px; border-radius: 25px; animation: pulse-glow 1.5s infinite alternate; }
         @keyframes pulse-glow {
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.5); }
             100% { transform: scale(1.05); box-shadow: 0 0 25px 15px rgba(14, 165, 233, 0); }
         }
 
         /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: var(--nav-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: all 0.3s ease; }
         .nav-left { display: flex; align-items: center; gap: 12px; }
         .nav-icon { width: 35px; border-radius: 8px; opacity: 0; transform: scale(0); transition: all 0.3s ease; display: none; }
         .brand { font-size: 24px; font-weight: 700; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
         .nav-right { display: flex; align-items: center; gap: 12px; }
 
-        .lang-wrapper {
-            background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 6px 14px; border: 1px solid var(--primary); border-radius: 50px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 13px;
-        }
+        .lang-wrapper { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 6px 14px; border: 1px solid var(--primary); border-radius: 50px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 13px; }
         .lang-wrapper:hover { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
         .lang-spinner { background: transparent; color: inherit; border: none; font-size: 13px; font-weight: 600; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; padding: 0; }
         .lang-spinner option { background: var(--bg-color); color: var(--text-main); }
@@ -145,66 +120,34 @@
         .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 16px 40px; font-size: 18px; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); display: flex; align-items: center; gap: 10px; text-decoration: none; }
         .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5); }
 
-        /* Hero */
+        /* Hero & Typing Effect */
         .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 20px 60px; }
         .hero-img { width: 140px; border-radius: 30px; box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3); margin-bottom: 30px; animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        
         h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.3; }
+        .typewriter-text { color: var(--primary); background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cursor { display: inline-block; width: 3px; background-color: var(--text-main); margin: 0 5px; animation: blink 0.75s step-end infinite; }
+        
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
         .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 40px; }
 
+        /* Cards & Glassmorphism */
         .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
         .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; font-weight: 700; }
-
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 80px; }
 
-        /* 2. Glassmorphism + 3. Hover Effects */
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 40px 30px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة ناعمة جداً */
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .card:hover {
-            transform: translateY(-12px);
-            border-color: rgba(14, 165, 233, 0.5);
-            box-shadow: 0 25px 50px var(--card-shadow);
-        }
-
-        .card i { 
-            font-size: 3rem; 
-            color: var(--primary); 
-            margin-bottom: 20px; 
-            transition: all 0.4s ease; 
-        }
-        
-        /* تأثيرات الإضاءة والتكبير للأيقونة عند المرور على البطاقة */
-        .card:hover i {
-            transform: scale(1.15) translateY(-5px);
-            text-shadow: 0 10px 25px rgba(14, 165, 233, 0.6);
-            color: #38bdf8;
-        }
-        
+        .card { background: var(--card-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 40px 30px; border-radius: 20px; border: 1px solid var(--border-color); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
+        .card:hover { transform: translateY(-12px); border-color: rgba(14, 165, 233, 0.5); box-shadow: 0 25px 50px var(--card-shadow); }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; transition: all 0.4s ease; }
+        .card:hover i { transform: scale(1.15) translateY(-5px); text-shadow: 0 10px 25px rgba(14, 165, 233, 0.6); color: #38bdf8; }
         .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
         .pricing-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        
-        /* تطبيق الزجاج على الأسعار أيضاً */
-        .pricing-box {
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
+        .pricing-box { background: var(--card-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 20px; padding: 40px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
         .pricing-box h3 { font-size: 1.8rem; margin-bottom: 30px; color: var(--primary); border-bottom: 2px dashed var(--border-color); padding-bottom: 15px; display: flex; align-items: center; gap: 10px; }
         .price-list { list-style: none; }
         .price-list li { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border-color); font-size: 1.1rem; }
@@ -224,36 +167,9 @@
         .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* 4. زر العودة للأعلى */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-            z-index: 999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* تعديل مكان الزر في اللغة العربية ليكون في اليسار */
-        html[dir="rtl"] .back-to-top {
-            right: auto;
-            left: 30px;
-        }
-
+        /* زر العودة للأعلى */
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; width: 50px; height: 50px; border-radius: 50%; border: none; font-size: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; z-index: 999; display: flex; justify-content: center; align-items: center; }
+        html[dir="rtl"] .back-to-top { right: auto; left: 30px; }
         .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
         .back-to-top:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5); }
 
@@ -306,7 +222,13 @@
 
     <header class="hero">
         <img src="ico0n.png" alt="HouslyGo App Icon" class="hero-img" id="mainIcon">
-        <h1 data-i18n="heroTitle">Find Your Perfect Space</h1>
+        
+        <!-- التحديث الخاص بتأثير الكتابة -->
+        <h1>
+            <span data-i18n="heroTitleStatic">Find Your Perfect </span>
+            <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+        </h1>
+        
         <p data-i18n="heroDesc">The smartest, easiest, and most secure platform for buying, selling, and renting apartments and rooms.</p>
         <button class="btn-primary" id="mainDownloadBtn">
             <i class="fa-brands fa-android"></i> <span data-i18n="downloadSoon">Download Soon</span>
@@ -397,15 +319,16 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('fade-out');
-            }, 1200); // الشاشة ستظهر لثانية وربع تقريباً
+            }, 1200); 
         });
 
+        // قواميس اللغات
         const translations = {
             en: {
                 title: "HouslyGo | Smart Real Estate Platform",
                 pricingBtn: "Pricing",
                 downloadBtn: "Download",
-                heroTitle: "Find Your Perfect Space",
+                heroTitleStatic: "Find Your Perfect ", // تم تعديلها لتناسب الأنيميشن
                 heroDesc: "The smartest, easiest, and most secure platform for buying, selling, and renting apartments and rooms.",
                 downloadSoon: "Download Soon",
                 ourServices: "Our Services",
@@ -437,7 +360,7 @@
                 title: "هوسلي جو | منصة العقارات الذكية",
                 pricingBtn: "الأسعار",
                 downloadBtn: "تحميل",
-                heroTitle: "ابحث عن مساحتك المثالية",
+                heroTitleStatic: "ابحث عن ", // تم تعديلها لتناسب الأنيميشن
                 heroDesc: "المنصة الأذكى والأسهل والأكثر أماناً لبيع وشراء وإيجار الشقق والغرف.",
                 downloadSoon: "حمل قريباً",
                 ourServices: "خدماتنا",
@@ -467,6 +390,49 @@
             }
         };
 
+        // --- كود الكتابة المتحركة (Typing Effect) ---
+        const typingWords = {
+            en: ["Space", "Apartment", "Room"],
+            ar: ["مساحتك المثالية", "شقتك المثالية", "غرفتك المثالية"]
+        };
+        let tWordIndex = 0;
+        let tCharIndex = 0;
+        let isDeleting = false;
+        let typeTimeout;
+
+        function typeEffect() {
+            const lang = document.documentElement.lang || 'en';
+            const currentWords = typingWords[lang];
+            
+            // التأكد من عدم تجاوز الفهرس عند تغيير اللغة
+            if (tWordIndex >= currentWords.length) tWordIndex = 0;
+            
+            const currentWord = currentWords[tWordIndex];
+            const typewriterEl = document.getElementById('typewriter');
+            
+            if (isDeleting) {
+                typewriterEl.textContent = currentWord.substring(0, tCharIndex - 1);
+                tCharIndex--;
+            } else {
+                typewriterEl.textContent = currentWord.substring(0, tCharIndex + 1);
+                tCharIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && tCharIndex === currentWord.length) {
+                typeSpeed = 2000; // توقف عند اكتمال الكلمة
+                isDeleting = true;
+            } else if (isDeleting && tCharIndex === 0) {
+                isDeleting = false;
+                tWordIndex = (tWordIndex + 1) % currentWords.length;
+                typeSpeed = 500; // توقف قبل كتابة الكلمة الجديدة
+            }
+
+            typeTimeout = setTimeout(typeEffect, typeSpeed);
+        }
+
+        // إعدادات اللغة وتغييرها
         const langSpinner = document.getElementById('langSpinner');
         const userLang = navigator.language || navigator.userLanguage;
         let currentLang = localStorage.getItem('appLang') || (userLang.startsWith('ar') ? 'ar' : 'en');
@@ -492,22 +458,29 @@
             });
             
             document.title = translations[lang].title;
+
+            // إعادة ضبط تأثير الكتابة عند تغيير اللغة لتجنب التداخل
+            clearTimeout(typeTimeout);
+            tCharIndex = 0;
+            tWordIndex = 0;
+            isDeleting = false;
+            document.getElementById('typewriter').textContent = '';
+            typeEffect();
         }
 
+        // أحداث التمرير (الشريط العلوي وزر العودة للأعلى)
         const backToTopBtn = document.getElementById('backToTop');
         const navbar = document.getElementById('navbar');
 
         window.addEventListener('scroll', () => {
             const heroHeight = document.querySelector('.hero').offsetHeight;
             
-            // تغيير النافبار
             if (window.scrollY > heroHeight / 2) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
 
-            // إظهار/إخفاء زر العودة للأعلى
             if (window.scrollY > 500) {
                 backToTopBtn.classList.add('show');
             } else {
@@ -515,12 +488,11 @@
             }
         });
 
-        // تفعيل زر العودة للأعلى
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // التأثير التدريجي للظهور
+        // الظهور التدريجي للعناصر (Reveal)
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
