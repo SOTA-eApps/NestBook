@@ -1,42 +1,333 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>Terms & Conditions - NestBook</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-792K5E73WK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-792K5E73WK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">NestBook | Terms & Conditions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* المتغيرات الأساسية للموقع */
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #6366f1;
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.65);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --nav-bg: rgba(15, 23, 42, 0.85);
+            --hero-bg: radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 40%),
+                       radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                       #0f172a;
+            --footer-bg: #020617;
+            --font-en: 'Poppins', sans-serif;
+            --font-ar: 'Cairo', sans-serif;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #0284c7; 
+                --secondary: #4f46e5;
+                --bg-color: #f8fafc;
+                --card-bg: rgba(255, 255, 255, 0.7);
+                --text-main: #0f172a;
+                --text-muted: #475569;
+                --border-color: rgba(0, 0, 0, 0.05);
+                --nav-bg: rgba(255, 255, 255, 0.85);
+                --hero-bg: radial-gradient(circle at 20% 30%, rgba(2, 132, 199, 0.1) 0%, transparent 40%),
+                           radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.1) 0%, transparent 40%),
+                           #f1f5f9;
+                --footer-bg: #e2e8f0;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: var(--hero-bg);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: var(--font-en);
+        }
+        
+        body[dir="rtl"] { font-family: var(--font-ar); }
+
+        /* Navbar */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: all 0.3s ease; }
+        .nav-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-icon { width: 35px; border-radius: 8px; opacity: 1; transform: scale(1); } 
+        .brand { font-size: 24px; font-weight: 700; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 12px; }
+
+        .lang-wrapper { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 6px 14px; border: 1px solid var(--primary); border-radius: 50px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 13px; }
+        .lang-wrapper:hover { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
+        .lang-spinner { background: transparent; color: inherit; border: none; font-size: 13px; font-weight: 600; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; padding: 0; }
+        .lang-spinner option { background: var(--bg-color); color: var(--text-main); }
+
+        /* تصميم صفحة السياسات */
+        .legal-header {
+            text-align: center;
+            padding: 140px 20px 40px;
+        }
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .legal-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .legal-container {
+            max-width: 900px; 
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .legal-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .legal-card h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legal-card h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-card p {
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        .legal-card ul {
+            margin-bottom: 20px;
+            padding-inline-start: 20px; 
+            color: var(--text-muted);
+        }
+
+        .legal-card li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer { background: var(--footer-bg); padding: 40px 20px 30px; text-align: center; border-top: 1px solid var(--border-color); }
+        .company-info { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .sota-logo { width: 40px; border-radius: 10px; }
+        .copyright { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .legal-header { padding-top: 110px; }
+            .legal-header h1 { font-size: 2.2rem; }
+            .legal-card { padding: 30px 20px; }
+            .legal-card h2 { font-size: 1.3rem; }
+            
+            .navbar { padding: 12px 15px; }
+            .brand { display: none; } 
+            .nav-left { gap: 8px; }
+            .nav-right { gap: 6px; }
+            .lang-wrapper { padding: 4px 10px; font-size: 11px; }
+            .lang-spinner { font-size: 11px; }
+        }
+    </style>
 </head>
+<body>
 
-<body style="font-family:Arial; padding:40px">
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-left">
+            <img src="ico0n.png" alt="NestBook Icon" class="nav-icon">
+            <div class="brand">NestBook</div>
+        </a>
+        
+        <div class="nav-right">
+            <div class="lang-wrapper">
+                <i class="fa-solid fa-globe"></i>
+                <select id="langSpinner" class="lang-spinner">
+                    <option value="en">EN</option>
+                    <option value="ar">عربي</option>
+                </select>
+            </div>
+        </div>
+    </nav>
 
-<h1>Terms & Conditions</h1>
+    <header class="legal-header">
+        <h1 data-i18n="pageTitle">Terms & Conditions</h1>
+        <p data-i18n="lastUpdated">Last updated: April 2026</p>
+    </header>
 
-<p>
-Welcome to NestBook.
-By using this application you agree to the following terms.
-</p>
+    <main class="legal-container">
+        <div class="legal-card">
+            
+            <h2 data-i18n="introTitle">Welcome to NestBook!</h2>
+            <p data-i18n="introText">Please read these terms and conditions carefully before using the application. Your use of the application constitutes your full and binding agreement to all the terms mentioned below.</p>
 
-<p>
-NestBook is a platform that allows users to post and browse rooms and apartments for rent.
-The application acts only as a mediator between users.
-</p>
+            <h2 data-i18n="sec1Title">1. Nature of the Service (Role of the App)</h2>
+            <ul>
+                <li data-i18n="sec1Bul1">The "NestBook" app operates as an electronic intermediary platform aimed at facilitating connections between property seekers and property owners.</li>
+                <li data-i18n="sec1Bul2">The application does not own, manage, or rent any of the displayed units, nor is it a party to any lease contract or agreement concluded between the user and the owner.</li>
+            </ul>
 
-<p>
-The developer is not responsible for any agreements made between users.
-All transactions are done at the user's own responsibility.
-</p>
+            <h2 data-i18n="sec2Title">2. Fees and App Commission</h2>
+            <ul>
+                <li data-i18n="sec2Bul1">The amounts paid electronically through the application (via payment cards or electronic wallets) are the "App Usage Commission" in exchange for the service of obtaining the property owner's contact information.</li>
+                <li data-i18n="sec2Bul2">These fees are not considered part of the rent value, nor are they considered a deposit to reserve the residential unit.</li>
+            </ul>
 
-<p>
-This application is currently in testing phase.
-Features, prices, and services may change at any time.
-</p>
+            <h2 data-i18n="sec3Title">3. Cancellation and Non-Refundable Policy</h2>
+            <ul>
+                <li data-i18n="sec3Bul1">Given the digital and immediate nature of the service provided by the application; once the payment process is successfully completed and the owner's contact details appear to the user, the service is considered fully executed.</li>
+                <li data-i18n="sec3Bul2">Accordingly, the amounts paid as a commission to the application are strictly non-refundable under any circumstances, even if the user backs out of renting the unit or fails to reach an agreement with the owner, in order to prevent misuse of the service.</li>
+            </ul>
 
-<p>
-Any misuse of the application may lead to account suspension.
-</p>
+            <h2 data-i18n="sec4Title">4. Disclaimer</h2>
+            <ul>
+                <li data-i18n="sec4Bul1">It is the responsibility of the user and the owner to verify the identity of the other party, inspect the residential unit in person, and ensure all legal documents are in order before concluding any financial agreement or signing any external contracts.</li>
+                <li data-i18n="sec4Bul2">The "NestBook" app is not legally or financially responsible for any disagreements, disputes, or fraudulent activities that may arise between the user and the unit owner.</li>
+            </ul>
 
-<p>
-For support contact:
-nestbooksupport@gmail.com
-</p>
+            <h2 data-i18n="sec5Title">5. Eligibility of Use</h2>
+            <p data-i18n="sec5Text">The application is available for everyone to use. It is required that the user making electronic payments be of legal age to enter into contracts, or use the payment method with the consent and supervision of a guardian.</p>
 
+            <h2 data-i18n="sec6Title">6. Amendments</h2>
+            <p data-i18n="sec6Text">The "NestBook" app reserves the right to modify or change these terms and conditions at any time. Users will be notified of any material changes through the application.</p>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="company-info">
+            <img src="sota.png" alt="SOTA-eApps Logo" class="sota-logo">
+            <span style="font-size: 1.1rem; font-weight: 600;" data-i18n="bySota">by SOTA-eApps</span>
+        </div>
+        <p class="copyright">
+            <span data-i18n="copyright">&copy; 2026 SOTA-eApps. All rights reserved.</span> <br>
+            nestbooksupport@gmail.com
+        </p>
+    </footer>
+
+    <script>
+        // قواميس الترجمة لصفحة الشروط والأحكام
+        const translations = {
+            en: {
+                pageTitle: "Terms & Conditions",
+                lastUpdated: "Last updated: April 2026",
+                introTitle: "Welcome to NestBook!",
+                introText: "Please read these terms and conditions carefully before using the application. Your use of the application constitutes your full and binding agreement to all the terms mentioned below.",
+                sec1Title: "1. Nature of the Service (Role of the App)",
+                sec1Bul1: "The \"NestBook\" app operates as an electronic intermediary platform aimed at facilitating connections between property seekers and property owners.",
+                sec1Bul2: "The application does not own, manage, or rent any of the displayed units, nor is it a party to any lease contract or agreement concluded between the user and the owner.",
+                sec2Title: "2. Fees and App Commission",
+                sec2Bul1: "The amounts paid electronically through the application (via payment cards or electronic wallets) are the \"App Usage Commission\" in exchange for the service of obtaining the property owner's contact information.",
+                sec2Bul2: "These fees are not considered part of the rent value, nor are they considered a deposit to reserve the residential unit.",
+                sec3Title: "3. Cancellation and Non-Refundable Policy",
+                sec3Bul1: "Given the digital and immediate nature of the service provided by the application; once the payment process is successfully completed and the owner's contact details appear to the user, the service is considered fully executed.",
+                sec3Bul2: "Accordingly, the amounts paid as a commission to the application are strictly non-refundable under any circumstances, even if the user backs out of renting the unit or fails to reach an agreement with the owner, in order to prevent misuse of the service.",
+                sec4Title: "4. Disclaimer",
+                sec4Bul1: "It is the responsibility of the user and the owner to verify the identity of the other party, inspect the residential unit in person, and ensure all legal documents are in order before concluding any financial agreement or signing any external contracts.",
+                sec4Bul2: "The \"NestBook\" app is not legally or financially responsible for any disagreements, disputes, or fraudulent activities that may arise between the user and the unit owner.",
+                sec5Title: "5. Eligibility of Use",
+                sec5Text: "The application is available for everyone to use. It is required that the user making electronic payments be of legal age to enter into contracts, or use the payment method with the consent and supervision of a guardian.",
+                sec6Title: "6. Amendments",
+                sec6Text: "The \"NestBook\" app reserves the right to modify or change these terms and conditions at any time. Users will be notified of any material changes through the application.",
+                bySota: "by SOTA-eApps",
+                copyright: "© 2026 SOTA-eApps. All rights reserved."
+            },
+            ar: {
+                pageTitle: "الشروط والأحكام",
+                lastUpdated: "آخر تحديث: أبريل ٢٠٢٦",
+                introTitle: "مرحباً بك في تطبيق NestBook!",
+                introText: "يُرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام التطبيق. استخدامك للتطبيق يعني موافقتك الكاملة والملزمة على جميع الشروط المذكورة أدناه.",
+                sec1Title: "1. طبيعة الخدمة (دور التطبيق)",
+                sec1Bul1: "يعمل تطبيق \"NestBook\" كمنصة وسيطة إلكترونية تهدف إلى تسهيل التوصل بين الباحثين عن عقارات أو سكن وبين مُلاك هذه الوحدات.",
+                sec1Bul2: "التطبيق لا يمتلك، ولا يدير، ولا يؤجر أيًا من الوحدات المعروضة، ولا يُعد طرفاً في أي عقد إيجار أو اتفاق يتم إبرامه بين المستخدم والمالك.",
+                sec2Title: "2. الرسوم وعمولة التطبيق",
+                sec2Bul1: "المبالغ التي يتم دفعها إلكترونياً عبر التطبيق (بواسطة بطاقات الدفع أو المحافظ الإلكترونية) هي عبارة عن \"عمولة استخدام التطبيق\" مقابل خدمة الحصول على بيانات التواصل الخاصة بمالك الوحدة.",
+                sec2Bul2: "هذه الرسوم لا تُعد جزءاً من قيمة الإيجار، ولا تُعتبر عربوناً لحجز الوحدة السكنية.",
+                sec3Title: "3. سياسة الإلغاء وعدم الاسترجاع (Non-Refundable Policy)",
+                sec3Bul1: "نظراً لطبيعة الخدمة الرقمية والفورية التي يقدمها التطبيق؛ بمجرد إتمام عملية الدفع بنجاح وظهور بيانات تواصل المالك للمستخدم، تُعتبر الخدمة قد نُفذت بالكامل.",
+                sec3Bul2: "بناءً على ذلك، المبالغ المدفوعة كعمولة للتطبيق غير قابلة للاسترجاع نهائياً تحت أي ظرف من الظروف، حتى في حالة تراجع المستخدم عن تأجير الوحدة أو عدم اتفاقه مع المالك، وذلك لمنع إساءة استخدام الخدمة.",
+                sec4Title: "4. إخلاء المسؤولية",
+                sec4Bul1: "يقع على عاتق المستخدم والمالك مسؤولية التحقق من هوية الطرف الآخر، ومعاينة الوحدة السكنية على أرض الواقع، والتأكد من كافة الأوراق القانونية قبل إتمام أي اتفاق مالي أو توقيع أي عقود خارجية.",
+                sec4Bul2: "تطبيق \"NestBook\" غير مسؤول قانونياً أو مالياً عن أي خلافات، نزاعات، أو عمليات احتيال قد تنشأ بين المستخدم ومالك الوحدة.",
+                sec5Title: "5. أهلية الاستخدام",
+                sec5Text: "التطبيق متاح لاستخدام الجميع، ويُشترط في المستخدم الذي يقوم بعمليات الدفع الإلكتروني أن يكون بالغاً للسن القانونية التي تؤهله لإبرام العقود، أو أن يستخدم وسيلة الدفع بموافقة وإشراف ولي الأمر.",
+                sec6Title: "6. التعديلات",
+                sec6Text: "يحتفظ تطبيق \"NestBook\" بالحق في تعديل أو تغيير هذه الشروط والأحكام في أي وقت، وسيتم إشعار المستخدمين بأي تغييرات جوهرية عبر التطبيق.",
+                bySota: "بواسطة SOTA-eApps",
+                copyright: "© 2026 SOTA-eApps. جميع الحقوق محفوظة."
+            }
+        };
+
+        const langSpinner = document.getElementById('langSpinner');
+        const userLang = navigator.language || navigator.userLanguage;
+        let currentLang = localStorage.getItem('appLang') || (userLang.startsWith('ar') ? 'ar' : 'en');
+        
+        langSpinner.value = currentLang;
+        setLanguage(currentLang);
+
+        langSpinner.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        function setLanguage(lang) {
+            localStorage.setItem('appLang', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.title = translations[lang].pageTitle + (lang === 'ar' ? " | نيست بوك" : " | NestBook");
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
