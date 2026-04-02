@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-792K5E73WK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-792K5E73WK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">NestBook | Shipping & Delivery</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* المتغيرات الأساسية للموقع */
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #6366f1;
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.65);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --nav-bg: rgba(15, 23, 42, 0.85);
+            --hero-bg: radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 40%),
+                       radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                       #0f172a;
+            --footer-bg: #020617;
+            --font-en: 'Poppins', sans-serif;
+            --font-ar: 'Cairo', sans-serif;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #0284c7; 
+                --secondary: #4f46e5;
+                --bg-color: #f8fafc;
+                --card-bg: rgba(255, 255, 255, 0.7);
+                --text-main: #0f172a;
+                --text-muted: #475569;
+                --border-color: rgba(0, 0, 0, 0.05);
+                --nav-bg: rgba(255, 255, 255, 0.85);
+                --hero-bg: radial-gradient(circle at 20% 30%, rgba(2, 132, 199, 0.1) 0%, transparent 40%),
+                           radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.1) 0%, transparent 40%),
+                           #f1f5f9;
+                --footer-bg: #e2e8f0;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: var(--hero-bg);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: var(--font-en);
+        }
+        
+        body[dir="rtl"] { font-family: var(--font-ar); }
+
+        /* Navbar */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: all 0.3s ease; }
+        .nav-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-icon { width: 35px; border-radius: 8px; opacity: 1; transform: scale(1); } 
+        .brand { font-size: 24px; font-weight: 700; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 12px; }
+
+        .lang-wrapper { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 6px 14px; border: 1px solid var(--primary); border-radius: 50px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 13px; }
+        .lang-wrapper:hover { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
+        .lang-spinner { background: transparent; color: inherit; border: none; font-size: 13px; font-weight: 600; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; padding: 0; }
+        .lang-spinner option { background: var(--bg-color); color: var(--text-main); }
+
+        /* تصميم صفحة السياسات */
+        .legal-header {
+            text-align: center;
+            padding: 140px 20px 40px;
+        }
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .legal-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .legal-container {
+            max-width: 900px; 
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .legal-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .legal-card h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legal-card h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-card p {
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        .legal-card ul {
+            margin-bottom: 20px;
+            padding-inline-start: 20px; 
+            color: var(--text-muted);
+        }
+
+        .legal-card li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer { background: var(--footer-bg); padding: 40px 20px 30px; text-align: center; border-top: 1px solid var(--border-color); }
+        .company-info { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .sota-logo { width: 40px; border-radius: 10px; }
+        .copyright { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .legal-header { padding-top: 110px; }
+            .legal-header h1 { font-size: 2.2rem; }
+            .legal-card { padding: 30px 20px; }
+            .legal-card h2 { font-size: 1.3rem; }
+            
+            .navbar { padding: 12px 15px; }
+            .brand { display: none; } 
+            .nav-left { gap: 8px; }
+            .nav-right { gap: 6px; }
+            .lang-wrapper { padding: 4px 10px; font-size: 11px; }
+            .lang-spinner { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-left">
+            <img src="ico0n.png" alt="NestBook Icon" class="nav-icon">
+            <div class="brand">NestBook</div>
+        </a>
+        
+        <div class="nav-right">
+            <div class="lang-wrapper">
+                <i class="fa-solid fa-globe"></i>
+                <select id="langSpinner" class="lang-spinner">
+                    <option value="en">EN</option>
+                    <option value="ar">عربي</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <header class="legal-header">
+        <h1 data-i18n="pageTitle">Shipping & Delivery Policy</h1>
+        <p data-i18n="lastUpdated">Last updated: April 2026</p>
+    </header>
+
+    <main class="legal-container">
+        <div class="legal-card">
+            
+            <h2 data-i18n="sec1Title">1. Delivery Method</h2>
+            <p data-i18n="sec1Text">Please note that the "NestBook" platform and website provide entirely digital and informational services. We do not sell or ship any physical goods that require delivery via traditional shipping companies.</p>
+
+            <h2 data-i18n="sec2Title">2. Delivery Time</h2>
+            <ul>
+                <li data-i18n="sec2Bul1">The service is executed and delivered instantly (Instant Delivery).</li>
+                <li data-i18n="sec2Bul2">Once the electronic payment process is successfully completed (whether via bank cards or electronic wallets), the system automatically and without any human intervention displays the contact details of the owner of the selected residential unit directly on the user's screen.</li>
+            </ul>
+
+            <h2 data-i18n="sec3Title">3. Order Confirmation</h2>
+            <p data-i18n="sec3Text">After payment, a notification will appear to the user on the website confirming the success of the transaction, in addition to the appearance of the required information (owner's phone number/contact method) at the same moment, which constitutes a full completion of the "delivery" process on our part.</p>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="company-info">
+            <img src="sota.png" alt="SOTA-eApps Logo" class="sota-logo">
+            <span style="font-size: 1.1rem; font-weight: 600;" data-i18n="bySota">by SOTA-eApps</span>
+        </div>
+        <p class="copyright">
+            <span data-i18n="copyright">&copy; 2026 SOTA-eApps. All rights reserved.</span> <br>
+            nestbooksupport@gmail.com
+        </p>
+    </footer>
+
+    <script>
+        // قواميس الترجمة لصفحة سياسة الشحن والتسليم
+        const translations = {
+            en: {
+                pageTitle: "Shipping & Delivery Policy",
+                lastUpdated: "Last updated: April 2026",
+                sec1Title: "1. Delivery Method",
+                sec1Text: "Please note that the \"NestBook\" platform and website provide entirely digital and informational services. We do not sell or ship any physical goods that require delivery via traditional shipping companies.",
+                sec2Title: "2. Delivery Time",
+                sec2Bul1: "The service is executed and delivered instantly (Instant Delivery).",
+                sec2Bul2: "Once the electronic payment process is successfully completed (whether via bank cards or electronic wallets), the system automatically and without any human intervention displays the contact details of the owner of the selected residential unit directly on the user's screen.",
+                sec3Title: "3. Order Confirmation",
+                sec3Text: "After payment, a notification will appear to the user on the website confirming the success of the transaction, in addition to the appearance of the required information (owner's phone number/contact method) at the same moment, which constitutes a full completion of the \"delivery\" process on our part.",
+                bySota: "by SOTA-eApps",
+                copyright: "© 2026 SOTA-eApps. All rights reserved."
+            },
+            ar: {
+                pageTitle: "سياسة الشحن والتسليم",
+                lastUpdated: "آخر تحديث: أبريل ٢٠٢٦",
+                sec1Title: "1. طبيعة التسليم (Delivery Method)",
+                sec1Text: "يُرجى العلم أن منصة وموقع \"NestBook\" يقدمان خدمات رقمية ومعلوماتية بالكامل. نحن لا نقوم ببيع أو شحن أي منتجات مادية (Physical Goods) تتطلب توصيلاً عبر شركات الشحن التقليدية.",
+                sec2Title: "2. وقت التسليم (Delivery Time)",
+                sec2Bul1: "يتم تنفيذ وتسليم الخدمة بشكل فوري ولحظي (Instant Delivery).",
+                sec2Bul2: "بمجرد إتمام عملية الدفع الإلكتروني بنجاح (سواء عبر البطاقات البنكية أو المحافظ الإلكترونية)، يقوم النظام تلقائياً وبدون أي تدخل بشري بعرض بيانات التواصل الخاصة بمالك الوحدة السكنية المختارة على شاشة المستخدم مباشرة.",
+                sec3Title: "3. تأكيد الطلب",
+                sec3Text: "بعد الدفع، سيظهر للمستخدم إشعار على الموقع يؤكد نجاح العملية، بالإضافة إلى ظهور المعلومات المطلوبة (رقم هاتف المالك/وسيلة التواصل) في نفس اللحظة، مما يُعد إتماماً كاملاً لعملية \"التسليم\" من جانبنا.",
+                bySota: "بواسطة SOTA-eApps",
+                copyright: "© 2026 SOTA-eApps. جميع الحقوق محفوظة."
+            }
+        };
+
+        const langSpinner = document.getElementById('langSpinner');
+        const userLang = navigator.language || navigator.userLanguage;
+        let currentLang = localStorage.getItem('appLang') || (userLang.startsWith('ar') ? 'ar' : 'en');
+        
+        langSpinner.value = currentLang;
+        setLanguage(currentLang);
+
+        langSpinner.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        function setLanguage(lang) {
+            localStorage.setItem('appLang', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.title = translations[lang].pageTitle + (lang === 'ar' ? " | نيست بوك" : " | NestBook");
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
