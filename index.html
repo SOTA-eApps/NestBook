@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!-- Google tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-792K5E73WK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -10,8 +9,6 @@
 
         gtag('config', 'G-792K5E73WK');
     </script>
-    <!-- نهاية كود Google Analytics -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">NestBook | Smart Real Estate Platform</title>
@@ -168,8 +165,8 @@
         .free-note { background: var(--note-bg); border: 1px dashed var(--note-border); color: var(--note-text); text-align: center; padding: 20px; border-radius: 15px; margin-top: 40px; font-weight: 600; font-size: 1.1rem; display: flex; justify-content: center; align-items: center; gap: 10px; }
 
         footer { background: var(--footer-bg); padding: 60px 20px 30px; text-align: center; border-top: 1px solid var(--border-color); transition: background 0.3s ease; }
-        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 40px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
         .footer-links a:hover { color: var(--primary); }
         .company-info { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; }
         .sota-logo { width: 40px; border-radius: 10px; }
@@ -199,12 +196,12 @@
             .navbar.scrolled .brand { display: none; }
             .back-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 18px; }
             html[dir="rtl"] .back-to-top { left: 20px; right: auto; }
+            .footer-links { gap: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- شاشة التحميل -->
     <div id="preloader">
         <img src="ico0n.png" alt="Loading NestBook..." class="loader-logo">
     </div>
@@ -302,9 +299,12 @@
 
     <footer>
         <div class="footer-links">
+            <a href="about.html" data-i18n="about">About Us</a>
+            <a href="contact.html" data-i18n="contact">Contact Us</a>
             <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
             <a href="terms.html" data-i18n="terms">Terms & Conditions</a>
-            <a href="mailto:nestbooksupport@gmail.com" data-i18n="contact">Contact Support</a>
+            <a href="refund.html" data-i18n="refund">Refund Policy</a>
+            <a href="shipping.html" data-i18n="shipping">Shipping & Delivery</a>
         </div>
         
         <div class="company-info">
@@ -318,7 +318,6 @@
         </p>
     </footer>
 
-    <!-- زر العودة للأعلى -->
     <button id="backToTop" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -362,9 +361,12 @@
                 priceRoomRent: "?? EGP",
                 priceBedRent: "?? EGP",
                 freeNote: "Note: All services are completely FREE during the trial period!",
+                about: "About Us",
+                contact: "Contact Us",
                 privacy: "Privacy Policy",
                 terms: "Terms & Conditions",
-                contact: "Contact Support",
+                refund: "Refund Policy",
+                shipping: "Shipping & Delivery",
                 bySota: "by SOTA-eApps",
                 copyright: "© 2026 SOTA-eApps. All rights reserved."
             },
@@ -397,9 +399,12 @@
                 priceRoomRent: "?? ج.م",
                 priceBedRent: "?? ج.م",
                 freeNote: "ملاحظة: جميع الخدمات مجانية بالكامل خلال الفترة التجريبية!",
+                about: "من نحن",
+                contact: "تواصل معنا",
                 privacy: "سياسة الخصوصية",
                 terms: "الشروط والأحكام",
-                contact: "تواصل مع الدعم",
+                refund: "سياسة الاسترجاع",
+                shipping: "سياسة الشحن والتسليم",
                 bySota: "بواسطة SOTA-eApps",
                 copyright: "© 2026 SOTA-eApps. جميع الحقوق محفوظة."
             }
