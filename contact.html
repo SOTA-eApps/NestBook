@@ -147,7 +147,6 @@
             text-align: center;
         }
 
-        /* تنسيق الأزرار بجوار النص */
         .contact-value-wrapper {
             display: flex;
             align-items: center;
@@ -157,39 +156,46 @@
             width: 100%;
         }
 
-        .contact-value-wrapper span {
+        .contact-value-wrapper > span {
             color: var(--text-muted);
         }
 
+        /* تنسيق الأزرار بجوار النص (التعديل هنا) */
         .action-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 6px 16px;
+            padding: 8px 18px;
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
-            color: #fff;
+            color: #ffffff !important; /* إجبار اللون الأبيض */
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* إجبار الأيقونة والنص داخل الزر على اللون الأبيض */
+        .action-btn span, .action-btn i {
+            color: #ffffff !important;
         }
 
         .email-btn {
-            background-color: #ea4335; /* لون جيميل */
+            background-color: #ea4335;
         }
         .email-btn:hover {
             background-color: #c5221f;
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(234, 67, 53, 0.3);
+            box-shadow: 0 6px 15px rgba(234, 67, 53, 0.4);
         }
 
         .wa-btn {
-            background-color: #25D366; /* لون واتساب */
+            background-color: #25D366; 
         }
         .wa-btn:hover {
             background-color: #128C7E;
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
         }
 
         /* Footer */
