@@ -1,43 +1,363 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>Privacy Policy - NestBook</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-792K5E73WK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-792K5E73WK');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">NestBook | Privacy Policy</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* نفس المتغيرات الأساسية للموقع */
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #6366f1;
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.65);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --nav-bg: rgba(15, 23, 42, 0.85);
+            --hero-bg: radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 40%),
+                       radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                       #0f172a;
+            --footer-bg: #020617;
+            --font-en: 'Poppins', sans-serif;
+            --font-ar: 'Cairo', sans-serif;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --primary: #0284c7; 
+                --secondary: #4f46e5;
+                --bg-color: #f8fafc;
+                --card-bg: rgba(255, 255, 255, 0.7);
+                --text-main: #0f172a;
+                --text-muted: #475569;
+                --border-color: rgba(0, 0, 0, 0.05);
+                --nav-bg: rgba(255, 255, 255, 0.85);
+                --hero-bg: radial-gradient(circle at 20% 30%, rgba(2, 132, 199, 0.1) 0%, transparent 40%),
+                           radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.1) 0%, transparent 40%),
+                           #f1f5f9;
+                --footer-bg: #e2e8f0;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: var(--hero-bg);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8; /* زيادة المسافة بين السطور لراحة القراءة */
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: var(--font-en);
+        }
+        
+        body[dir="rtl"] { font-family: var(--font-ar); }
+
+        /* Navbar (نفس التصميم) */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: all 0.3s ease; }
+        .nav-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-icon { width: 35px; border-radius: 8px; opacity: 1; transform: scale(1); } /* الأيقونة ظاهرة دائماً هنا */
+        .brand { font-size: 24px; font-weight: 700; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
+        .nav-right { display: flex; align-items: center; gap: 12px; }
+
+        .lang-wrapper { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 6px 14px; border: 1px solid var(--primary); border-radius: 50px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.3s ease; font-size: 13px; }
+        .lang-wrapper:hover { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
+        .lang-spinner { background: transparent; color: inherit; border: none; font-size: 13px; font-weight: 600; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; padding: 0; }
+        .lang-spinner option { background: var(--bg-color); color: var(--text-main); }
+
+        .pricing-btn { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 10px 24px; font-size: 15px; font-weight: 600; border: 1px solid var(--primary); border-radius: 50px; text-decoration: none; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .pricing-btn:hover { background: var(--primary); color: white; box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
+        
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 10px 24px; font-size: 14px; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(14, 165, 233, 0.5); }
+
+        /* تصميم صفحة السياسات (Legal Container) */
+        .legal-header {
+            text-align: center;
+            padding: 140px 20px 40px;
+        }
+        .legal-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .legal-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .legal-container {
+            max-width: 900px; /* عرض مريح لعين القارئ */
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .legal-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .legal-card h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legal-card h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-card p {
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        .legal-card ul {
+            margin-bottom: 20px;
+            padding-inline-start: 20px; /* تعمل مع RTL و LTR */
+            color: var(--text-muted);
+        }
+
+        .legal-card li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer { background: var(--footer-bg); padding: 40px 20px 30px; text-align: center; border-top: 1px solid var(--border-color); }
+        .company-info { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .sota-logo { width: 40px; border-radius: 10px; }
+        .copyright { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .legal-header { padding-top: 110px; }
+            .legal-header h1 { font-size: 2.2rem; }
+            .legal-card { padding: 30px 20px; }
+            .legal-card h2 { font-size: 1.3rem; }
+            
+            .navbar { padding: 12px 15px; }
+            .brand { display: none; } /* إخفاء النص لتوفير مساحة */
+            .nav-left { gap: 8px; }
+            .nav-right { gap: 6px; }
+            .lang-wrapper { padding: 4px 10px; font-size: 11px; }
+            .lang-spinner { font-size: 11px; }
+            .pricing-btn, .btn-primary { padding: 6px 10px; font-size: 12px; }
+        }
+    </style>
 </head>
+<body>
 
-<body style="font-family:Arial; padding:40px">
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-left">
+            <img src="ico0n.png" alt="NestBook Icon" class="nav-icon">
+            <div class="brand">NestBook</div>
+        </a>
+        
+        <div class="nav-right">
+            <div class="lang-wrapper">
+                <i class="fa-solid fa-globe"></i>
+                <select id="langSpinner" class="lang-spinner">
+                    <option value="en">EN</option>
+                    <option value="ar">عربي</option>
+                </select>
+            </div>
+            <a href="index.html#pricing" class="pricing-btn">
+                <i class="fa-solid fa-tags"></i> <span data-i18n="pricingBtn">Pricing</span>
+            </a>
+            <a href="index.html" class="btn-primary">
+                <i class="fa-solid fa-house"></i> <span data-i18n="homeBtn">Home</span>
+            </a>
+        </div>
+    </nav>
 
-<h1>Privacy Policy</h1>
+    <header class="legal-header">
+        <h1 data-i18n="pageTitle">Privacy Policy</h1>
+        <p data-i18n="lastUpdated">Last updated: April 2026</p>
+    </header>
 
-<p>
-NestBook respects your privacy.
-This application is designed to help users rent rooms and apartments.
-</p>
+    <main class="legal-container">
+        <div class="legal-card">
+            
+            <h2 data-i18n="introTitle">Introduction</h2>
+            <p data-i18n="introText">At "NestBook", we are fully committed to protecting the privacy of our users. This policy explains how we collect personal information, how it is used, and how it is protected when you use our application.</p>
 
-<p>
-We may collect basic information such as:
-</p>
+            <h2 data-i18n="sec1Title">1. Information We Collect</h2>
+            <p data-i18n="sec1Text">When you register on the app or make a payment, we may ask you to provide some basic information to facilitate the service, including:</p>
+            <ul>
+                <li data-i18n="sec1Bul1">Full name.</li>
+                <li data-i18n="sec1Bul2">Mobile phone number.</li>
+                <li data-i18n="sec1Bul3">Email address (if any).</li>
+                <li data-i18n="sec1Bul4">Details of the residential unit you are interested in.</li>
+            </ul>
 
-<ul>
-<li>Name</li>
-<li>Email</li>
-<li>Phone number</li>
-<li>Location</li>
-</ul>
+            <h2 data-i18n="sec2Title">2. How We Use Your Data</h2>
+            <p data-i18n="sec2Text">Our use of the information we collect is strictly limited to the essential purposes of operating the application, which are:</p>
+            <ul>
+                <li data-i18n="sec2Bul1"><strong>Providing the core service:</strong> Sending a notification to the property owner containing only your (name and phone number) to inform them of your interest in their unit and facilitate communication between you.</li>
+                <li data-i18n="sec2Bul2"><strong>Payment management:</strong> Processing the application commission, confirming successful payments, and resolving any technical issues you may encounter during payment.</li>
+                <li data-i18n="sec2Bul3"><strong>Technical support:</strong> Communicating with you to answer inquiries or resolve any problems you face in the app.</li>
+            </ul>
 
-<p>
-This data is used only to provide the service and improve user experience.
-We do not sell or share personal data with third parties.
-</p>
+            <h2 data-i18n="sec3Title">3. No Data Sharing with Third-Parties</h2>
+            <p data-i18n="sec3Text">At "NestBook", we deeply respect your privacy. We assure you that we do not sell, rent, share, or trade your personal data with any third parties (such as advertising companies or marketing agencies) under any circumstances.</p>
 
-<p>
-This application is currently in testing phase and features may change.
-</p>
+            <h2 data-i18n="sec4Title">4. Electronic Payment Security (Payment Gateway)</h2>
+            <ul>
+                <li data-i18n="sec4Bul1">All electronic payment transactions (whether via bank cards or electronic wallets) are processed through a secure and certified payment gateway (Paymob).</li>
+                <li data-i18n="sec4Bul2">The "NestBook" app does not collect, store, or retain any credit card numbers or secret PINs for electronic wallets on its own servers. This data is encrypted and processed directly by the payment service provider.</li>
+            </ul>
 
-<p>
-If you have any questions, contact us at:
-nestbooksupport@gmail.com
-</p>
+            <h2 data-i18n="sec5Title">5. Data Security</h2>
+            <p data-i18n="sec5Text">We take all necessary technical and security measures to protect your registered data from unauthorized access, alteration, disclosure, or destruction.</p>
 
+            <h2 data-i18n="sec6Title">6. Privacy Policy Amendments</h2>
+            <p data-i18n="sec6Text">We may update the privacy policy from time to time. You will be notified of any material changes to this policy via app notifications.</p>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="company-info">
+            <img src="sota.png" alt="SOTA-eApps Logo" class="sota-logo">
+            <span style="font-size: 1.1rem; font-weight: 600;" data-i18n="bySota">by SOTA-eApps</span>
+        </div>
+        <p class="copyright">
+            <span data-i18n="copyright">&copy; 2026 SOTA-eApps. All rights reserved.</span> <br>
+            nestbooksupport@gmail.com
+        </p>
+    </footer>
+
+    <script>
+        // قواميس الترجمة لصفحة الخصوصية
+        const translations = {
+            en: {
+                pageTitle: "Privacy Policy",
+                lastUpdated: "Last updated: April 2026",
+                pricingBtn: "Pricing",
+                homeBtn: "Home",
+                introTitle: "Introduction",
+                introText: "At \"NestBook\", we are fully committed to protecting the privacy of our users. This policy explains how we collect personal information, how it is used, and how it is protected when you use our application.",
+                sec1Title: "1. Information We Collect",
+                sec1Text: "When you register on the app or make a payment, we may ask you to provide some basic information to facilitate the service, including:",
+                sec1Bul1: "Full name.",
+                sec1Bul2: "Mobile phone number.",
+                sec1Bul3: "Email address (if any).",
+                sec1Bul4: "Details of the residential unit you are interested in.",
+                sec2Title: "2. How We Use Your Data",
+                sec2Text: "Our use of the information we collect is strictly limited to the essential purposes of operating the application, which are:",
+                sec2Bul1: "Providing the core service: Sending a notification to the property owner containing only your (name and phone number) to inform them of your interest in their unit and facilitate communication between you.",
+                sec2Bul2: "Payment management: Processing the application commission, confirming successful payments, and resolving any technical issues you may encounter during payment.",
+                sec2Bul3: "Technical support: Communicating with you to answer inquiries or resolve any problems you face in the app.",
+                sec3Title: "3. No Data Sharing with Third-Parties",
+                sec3Text: "At \"NestBook\", we deeply respect your privacy. We assure you that we do not sell, rent, share, or trade your personal data with any third parties (such as advertising companies or marketing agencies) under any circumstances.",
+                sec4Title: "4. Electronic Payment Security (Payment Gateway)",
+                sec4Bul1: "All electronic payment transactions (whether via bank cards or electronic wallets) are processed through a secure and certified payment gateway (Paymob).",
+                sec4Bul2: "The \"NestBook\" app does not collect, store, or retain any credit card numbers or secret PINs for electronic wallets on its own servers. This data is encrypted and processed directly by the payment service provider.",
+                sec5Title: "5. Data Security",
+                sec5Text: "We take all necessary technical and security measures to protect your registered data from unauthorized access, alteration, disclosure, or destruction.",
+                sec6Title: "6. Privacy Policy Amendments",
+                sec6Text: "We may update the privacy policy from time to time. You will be notified of any material changes to this policy via app notifications.",
+                bySota: "by SOTA-eApps",
+                copyright: "© 2026 SOTA-eApps. All rights reserved."
+            },
+            ar: {
+                pageTitle: "سياسة الخصوصية",
+                lastUpdated: "آخر تحديث: أبريل ٢٠٢٦",
+                pricingBtn: "الأسعار",
+                homeBtn: "الرئيسية",
+                introTitle: "مقدمة",
+                introText: "نحن في تطبيق \"NestBook\" نلتزم التزاماً كاملاً بحماية خصوصية مستخدمينا. توضح هذه السياسة كيفية جمعنا للمعلومات الشخصية، وطرق استخدامها، وكيفية حمايتها عند استخدامك لتطبيقنا.",
+                sec1Title: "1. المعلومات التي نقوم بجمعها",
+                sec1Text: "عند تسجيلك في التطبيق أو قيامك بعملية دفع، قد نطلب منك تزويدنا ببعض المعلومات الأساسية لتسهيل تقديم الخدمة، وتشمل:",
+                sec1Bul1: "الاسم بالكامل.",
+                sec1Bul2: "رقم الهاتف المحمول.",
+                sec1Bul3: "البريد الإلكتروني (إن وُجد).",
+                sec1Bul4: "تفاصيل الوحدة السكنية التي تهتم بها.",
+                sec2Title: "2. كيف نستخدم بياناتك؟",
+                sec2Text: "يقتصر استخدامنا للمعلومات التي نجمعها على الأغراض الأساسية لتشغيل التطبيق، وهي:",
+                sec2Bul1: "تقديم الخدمة الأساسية: إرسال إشعار لمالك الوحدة السكنية يحتوي على (اسمك ورقم هاتفك) فقط، وذلك لإعلامه باهتمامك بوحدته وتسهيل التواصل بينكما.",
+                sec2Bul2: "إدارة المدفوعات: معالجة عمولة التطبيق وتأكيد عمليات الدفع الناجحة، وحل أي مشكلات تقنية قد تواجهك أثناء الدفع.",
+                sec2Bul3: "الدعم الفني: التواصل معك للرد على استفساراتك أو حل أي مشكلة تواجهك في التطبيق.",
+                sec3Title: "3. عدم مشاركة البيانات مع أطراف خارجية (Third-Parties)",
+                sec3Text: "نحن في \"NestBook\" نحترم خصوصيتك بشدة. نؤكد لك أننا لا نقوم ببيع، أو تأجير، أو مشاركة، أو تداول بياناتك الشخصية مع أي أطراف ثالثة (مثل شركات الإعلانات أو جهات التسويق) تحت أي ظرف من الظروف.",
+                sec4Title: "4. أمان الدفع الإلكتروني (بوابة الدفع)",
+                sec4Bul1: "جميع عمليات الدفع الإلكتروني (سواء بالبطاقات البنكية أو المحافظ الإلكترونية) تتم عبر بوابة دفع آمنة ومعتمدة (Paymob).",
+                sec4Bul2: "تطبيق \"NestBook\" لا يقوم بجمع أو تخزين أو الاحتفاظ بأي أرقام لبطاقات الائتمان أو الأرقام السرية للمحافظ الإلكترونية على خوادمه الخاصة. يتم تشفير هذه البيانات ومعالجتها مباشرة من قبل مزود خدمة الدفع.",
+                sec5Title: "5. أمان البيانات",
+                sec5Text: "نتخذ كافة الإجراءات التقنية والأمنية اللازمة لحماية بياناتك المسجلة لدينا من الوصول غير المصرح به، أو التعديل، أو الإفصاح، أو الإتلاف.",
+                sec6Title: "6. تعديلات سياسة الخصوصية",
+                sec6Text: "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم إعلامك بأي تغييرات جوهرية تطرأ على هذه السياسة عبر إشعارات التطبيق.",
+                bySota: "بواسطة SOTA-eApps",
+                copyright: "© 2026 SOTA-eApps. جميع الحقوق محفوظة."
+            }
+        };
+
+        // إعدادات اللغة (تقرأ من التخزين المحلي لضمان استمرارية تجربة المستخدم)
+        const langSpinner = document.getElementById('langSpinner');
+        const userLang = navigator.language || navigator.userLanguage;
+        let currentLang = localStorage.getItem('appLang') || (userLang.startsWith('ar') ? 'ar' : 'en');
+        
+        langSpinner.value = currentLang;
+        setLanguage(currentLang);
+
+        langSpinner.addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        function setLanguage(lang) {
+            localStorage.setItem('appLang', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    // استخدام innerHTML للحفاظ على الوسوم مثل <strong>
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.title = translations[lang].pageTitle + (lang === 'ar' ? " | نيست بوك" : " | NestBook");
+        }
+
+        // تأثير الشريط العلوي عند التمرير
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
