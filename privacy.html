@@ -59,7 +59,7 @@
             background-image: var(--hero-bg);
             background-attachment: fixed;
             color: var(--text-main);
-            line-height: 1.8; /* زيادة المسافة بين السطور لراحة القراءة */
+            line-height: 1.8; 
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
             font-family: var(--font-en);
@@ -67,10 +67,10 @@
         
         body[dir="rtl"] { font-family: var(--font-ar); }
 
-        /* Navbar (نفس التصميم) */
+        /* Navbar */
         .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: all 0.3s ease; }
         .nav-left { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .nav-icon { width: 35px; border-radius: 8px; opacity: 1; transform: scale(1); } /* الأيقونة ظاهرة دائماً هنا */
+        .nav-icon { width: 35px; border-radius: 8px; opacity: 1; transform: scale(1); } 
         .brand { font-size: 24px; font-weight: 700; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
         .nav-right { display: flex; align-items: center; gap: 12px; }
 
@@ -79,13 +79,7 @@
         .lang-spinner { background: transparent; color: inherit; border: none; font-size: 13px; font-weight: 600; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; padding: 0; }
         .lang-spinner option { background: var(--bg-color); color: var(--text-main); }
 
-        .pricing-btn { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 10px 24px; font-size: 15px; font-weight: 600; border: 1px solid var(--primary); border-radius: 50px; text-decoration: none; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
-        .pricing-btn:hover { background: var(--primary); color: white; box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
-        
-        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 10px 24px; font-size: 14px; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3); display: flex; align-items: center; gap: 8px; text-decoration: none; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(14, 165, 233, 0.5); }
-
-        /* تصميم صفحة السياسات (Legal Container) */
+        /* تصميم صفحة السياسات */
         .legal-header {
             text-align: center;
             padding: 140px 20px 40px;
@@ -104,7 +98,7 @@
         }
 
         .legal-container {
-            max-width: 900px; /* عرض مريح لعين القارئ */
+            max-width: 900px; 
             margin: 0 auto 80px;
             padding: 0 20px;
         }
@@ -141,7 +135,7 @@
 
         .legal-card ul {
             margin-bottom: 20px;
-            padding-inline-start: 20px; /* تعمل مع RTL و LTR */
+            padding-inline-start: 20px; 
             color: var(--text-muted);
         }
 
@@ -164,12 +158,11 @@
             .legal-card h2 { font-size: 1.3rem; }
             
             .navbar { padding: 12px 15px; }
-            .brand { display: none; } /* إخفاء النص لتوفير مساحة */
+            .brand { display: none; } 
             .nav-left { gap: 8px; }
             .nav-right { gap: 6px; }
             .lang-wrapper { padding: 4px 10px; font-size: 11px; }
             .lang-spinner { font-size: 11px; }
-            .pricing-btn, .btn-primary { padding: 6px 10px; font-size: 12px; }
         }
     </style>
 </head>
@@ -189,12 +182,6 @@
                     <option value="ar">عربي</option>
                 </select>
             </div>
-            <a href="index.html#pricing" class="pricing-btn">
-                <i class="fa-solid fa-tags"></i> <span data-i18n="pricingBtn">Pricing</span>
-            </a>
-            <a href="index.html" class="btn-primary">
-                <i class="fa-solid fa-house"></i> <span data-i18n="homeBtn">Home</span>
-            </a>
         </div>
     </nav>
 
@@ -256,13 +243,10 @@
     </footer>
 
     <script>
-        // قواميس الترجمة لصفحة الخصوصية
         const translations = {
             en: {
                 pageTitle: "Privacy Policy",
                 lastUpdated: "Last updated: April 2026",
-                pricingBtn: "Pricing",
-                homeBtn: "Home",
                 introTitle: "Introduction",
                 introText: "At \"NestBook\", we are fully committed to protecting the privacy of our users. This policy explains how we collect personal information, how it is used, and how it is protected when you use our application.",
                 sec1Title: "1. Information We Collect",
@@ -291,8 +275,6 @@
             ar: {
                 pageTitle: "سياسة الخصوصية",
                 lastUpdated: "آخر تحديث: أبريل ٢٠٢٦",
-                pricingBtn: "الأسعار",
-                homeBtn: "الرئيسية",
                 introTitle: "مقدمة",
                 introText: "نحن في تطبيق \"NestBook\" نلتزم التزاماً كاملاً بحماية خصوصية مستخدمينا. توضح هذه السياسة كيفية جمعنا للمعلومات الشخصية، وطرق استخدامها، وكيفية حمايتها عند استخدامك لتطبيقنا.",
                 sec1Title: "1. المعلومات التي نقوم بجمعها",
@@ -320,7 +302,6 @@
             }
         };
 
-        // إعدادات اللغة (تقرأ من التخزين المحلي لضمان استمرارية تجربة المستخدم)
         const langSpinner = document.getElementById('langSpinner');
         const userLang = navigator.language || navigator.userLanguage;
         let currentLang = localStorage.getItem('appLang') || (userLang.startsWith('ar') ? 'ar' : 'en');
@@ -341,7 +322,6 @@
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if(translations[lang][key]) {
-                    // استخدام innerHTML للحفاظ على الوسوم مثل <strong>
                     el.innerHTML = translations[lang][key];
                 }
             });
@@ -349,7 +329,6 @@
             document.title = translations[lang].pageTitle + (lang === 'ar' ? " | نيست بوك" : " | NestBook");
         }
 
-        // تأثير الشريط العلوي عند التمرير
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
