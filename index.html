@@ -118,15 +118,15 @@
 
         .pricing-btn { background: rgba(14, 165, 233, 0.1); color: var(--primary); padding: 10px 24px; font-size: 15px; font-weight: 600; border: 1px solid var(--primary); border-radius: 50px; text-decoration: none; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
         .pricing-btn:hover { background: var(--primary); color: white; box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3); transform: translateY(-2px); }
-        .nav-download-btn { display: none; padding: 10px 24px; font-size: 14px; white-space: nowrap; }
+        .nav-download-btn { display: none; padding: 10px 24px; font-size: 14px; white-space: nowrap; text-decoration: none; }
 
         .navbar.scrolled .nav-icon { display: block; opacity: 1; transform: scale(1); }
         .navbar.scrolled .nav-download-btn { display: flex; animation: fadeIn 0.3s ease forwards; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 16px 40px; font-size: 18px; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5); }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 16px 40px; font-size: 18px; font-weight: 600; border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; }
+        .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(14, 165, 233, 0.5); color: white; }
 
         /* Hero & Typing Effect */
         .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 20px 60px; }
@@ -222,9 +222,9 @@
             <a href="#pricing" class="pricing-btn">
                 <i class="fa-solid fa-tags"></i> <span data-i18n="pricingBtn">Pricing</span>
             </a>
-            <button class="btn-primary nav-download-btn">
+            <a href="NestBook.apk" download class="btn-primary nav-download-btn">
                 <i class="fa-brands fa-android"></i> <span data-i18n="downloadBtn">Download</span>
-            </button>
+            </a>
         </div>
     </nav>
 
@@ -237,9 +237,10 @@
         </h1>
         
         <p data-i18n="heroDesc">The smartest, easiest, and most secure platform for buying, selling, and renting apartments and rooms.</p>
-        <button class="btn-primary" id="mainDownloadBtn">
-            <i class="fa-brands fa-android"></i> <span data-i18n="downloadSoon">Download Soon</span>
-        </button>
+        
+        <a href="NestBook.apk" download class="btn-primary" id="mainDownloadBtn">
+            <i class="fa-brands fa-android"></i> <span data-i18n="downloadApp">Download for Android</span>
+        </a>
     </header>
 
     <main class="container">
@@ -336,9 +337,9 @@
                 title: "NestBook | Smart Real Estate Platform",
                 pricingBtn: "Pricing",
                 downloadBtn: "Download",
+                downloadApp: "Download for Android",
                 heroTitleStatic: "Find Your Perfect ", 
                 heroDesc: "The smartest, easiest, and most secure platform for buying, selling, and renting apartments and rooms.",
-                downloadSoon: "Download Soon",
                 ourServices: "Our Services",
                 buySell: "Buy & Sell",
                 buySellDesc: "Browse premium apartments for sale or list your property to reach thousands of buyers instantly.",
@@ -374,9 +375,9 @@
                 title: "نيست بوك | منصة العقارات الذكية",
                 pricingBtn: "الأسعار",
                 downloadBtn: "تحميل",
+                downloadApp: "تحميل للأندرويد",
                 heroTitleStatic: "ابحث عن ", 
                 heroDesc: "المنصة الأذكى والأسهل والأكثر أماناً لبيع وشراء وإيجار الشقق والغرف.",
-                downloadSoon: "حمل قريباً",
                 ourServices: "خدماتنا",
                 buySell: "بيع وشراء",
                 buySellDesc: "تصفح شقق مميزة للبيع أو اعرض عقارك للوصول لآلاف المشترين فوراً.",
